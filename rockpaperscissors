@@ -1,6 +1,7 @@
 from random import *
 
 numberofgames = 0
+wins = 0
 weapon = ["rock", "paper", "scissors"]
 
 print('How many games would you like to play?')
@@ -13,22 +14,28 @@ while numberofgames < playernumberofgames:
 	playerweapon = input("rock,paper or scissors?")
 	if playerweapon == enemyweapon:
 		print('Tie Game, Try Again')
-	
+
 
 	if playerweapon == 'rock' and enemyweapon == 'scissors':
 		print('You Win')
+		wins = wins + 1
 	if playerweapon == 'rock' and enemyweapon == 'paper':
 		print('You lose')
 
 
 	if playerweapon == 'paper' and enemyweapon == 'rock':
 		print('You Win')
+		wins = wins + 1
 	if playerweapon == 'paper' and enemyweapon == 'scissors':
 		print('You lose')
 
 
 	if playerweapon == 'scissors' and enemyweapon == 'paper':
 		print('You Win')
+		wins = wins + 1
 	if playerweapon == 'scissors' and enemyweapon == 'rock':
 		print('You lose')
 	numberofgames = numberofgames + 1
+
+
+print('You won ' + str(wins) + ' out of ' + str(numberofgames) + ' games')
