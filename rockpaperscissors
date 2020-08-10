@@ -1,16 +1,34 @@
 from random import *
 
-rock = 1
-paper = 2
-scissors = 3
+numberofgames = 0
+weapon = ["rock", "paper", "scissors"]
 
-randomx = randint(0, 3)
+print('How many games would you like to play?')
+playernumberofgames = int(input())
 
-while True:
-	x = input("rock,paper or scissors?")
-	if x = 1 and randomx = 1:
+randomx = randint(0, 2)
+enemyweapon = (weapon[randomx])
+
+while numberofgames < playernumberofgames:
+	playerweapon = input("rock,paper or scissors?")
+	if playerweapon == enemyweapon:
 		print('Tie Game, Try Again')
-	if x = 1 and randomx = 2:
-		print('You Lose')
-	if x = 1 and randomx = 3
-		print('')
+	
+
+	if playerweapon == 'rock' and enemyweapon == 'scissors':
+		print('You Win')
+	if playerweapon == 'rock' and enemyweapon == 'paper':
+		print('You lose')
+
+
+	if playerweapon == 'paper' and enemyweapon == 'rock':
+		print('You Win')
+	if playerweapon == 'paper' and enemyweapon == 'scissors':
+		print('You lose')
+
+
+	if playerweapon == 'scissors' and enemyweapon == 'paper':
+		print('You Win')
+	if playerweapon == 'scissors' and enemyweapon == 'rock':
+		print('You lose')
+	numberofgames = numberofgames + 1
