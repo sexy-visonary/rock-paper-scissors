@@ -1,0 +1,16 @@
+from random import *
+
+rock = 1
+paper = 2
+scissors = 3
+
+randomx = randint(0, 3)
+
+while True:
+	x = input("rock,paper or scissors?")
+	if x = 1 and randomx = 1:
+		print('Tie Game, Try Again')
+	if x = 1 and randomx = 2:
+		print('You Lose')
+	if x = 1 and randomx = 3
+		print('')
